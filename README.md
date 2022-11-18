@@ -1,4 +1,13 @@
 # long-hand-solutions
+forME
+```
 Rules:
-1. no imports >:(
-2. only pain >:(
+1. No imports >:(
+2. Only pain >:(
+```
+forYou
+```
+Judge my comments please.
+If you kant understand what it does. 
+I didnt do a good job.
+```
