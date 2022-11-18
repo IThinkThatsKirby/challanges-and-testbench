@@ -1,2 +1,3 @@
 # long-hand-solutions
-func gain(pain int) int {return pain}
+Rules:
+1. no imports
