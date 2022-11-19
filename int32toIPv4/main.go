@@ -44,6 +44,7 @@ func toDecimal(bin string) string {
 	}
 	return output
 }
+
 func toIPv4(bin string) (address string) { // returns the 4 parts of an IPv4 address
 	i := 8 - (32 - len(bin)) // end index of first octet
 	octet1 := toDecimal(bin[:i])
