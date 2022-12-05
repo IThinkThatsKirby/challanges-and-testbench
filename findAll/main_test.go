@@ -28,3 +28,28 @@ func Test_findAll(t *testing.T) {
 		})
 	}
 }
+
+func Test_digitize(t *testing.T) {
+	type args struct {
+		x int
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		{"case only need one", args{9078562341}, []int{9, 0, 7, 8, 5, 6, 2, 3, 4, 1}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := digitize(tt.args.x); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("digitze() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+func Benchmark_digitize(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		digitize(9078562341)
+	}
+}
