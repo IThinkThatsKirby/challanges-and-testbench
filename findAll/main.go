@@ -34,11 +34,11 @@ func digitize(x int) []int {
 // make append
 func appendDigitze(x int) []int {
 	digit := 0
-	digits := make([]int, 10)
+	digits := make([]int, 0)
 	for x >= 1 {
 		digit = x % 10
 		x /= 10
-		digits = append(digits, digit)
+		digits = append([]int{digit}, digits...)
 	}
 	return digits
 }
@@ -47,10 +47,10 @@ func appendDigitze(x int) []int {
 func copyDigitize(x int) []int {
 	digit := 0
 	digits := make([]int, 10)
-	for i := 0; x >= 1; i++ {
+	for i := 10; x >= 1; i-- {
 		digit = x % 10
 		x /= 10
-		copy(digits[i:], []int{digit})
+		copy(digits[i-1:], []int{digit})
 	}
 	return digits
 }
