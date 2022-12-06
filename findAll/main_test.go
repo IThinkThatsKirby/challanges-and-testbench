@@ -65,7 +65,7 @@ func Benchmark_appendDigitize(b *testing.B) {
 		appendDigitze(9078562341)
 	}
 }
-func Benchmark_copyDigitize(b *testing.B) { // winner winner tofu dinner.
+func Benchmark_copyDigitize(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		copyDigitize(9078562341)
 	}
