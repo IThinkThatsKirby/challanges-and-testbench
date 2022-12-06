@@ -1,7 +1,3 @@
-# long-hand-solutions
+# code-challanges
 
-```
-Rules:
-1. No imports >:(
-2. Only pain >:(
-```
+## testbench
