@@ -48,6 +48,17 @@ func Test_digitize(t *testing.T) {
 		})
 	}
 }
+
+func Benchmark_copyDigitize(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		copyDigitize(9078562341)
+	}
+}
+func Benchmark_appendDigitize(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		appendDigitze(9078562341)
+	}
+}
 func Benchmark_digitize(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		digitize(9078562341)
