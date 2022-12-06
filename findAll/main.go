@@ -19,28 +19,19 @@ func findAll(sumOfDigits, numberOfDigits int) []int {
 	return res
 }
 
+// easy readable append
 func digitize(x int) []int {
 	digit := 0
 	digits := []int{}
 	for i := 0; x >= 1; i++ {
 		digit = x % 10
 		x /= 10
-		digits = append(digits, digit)
+		digits = append([]int{digit}, digits...)
 	}
 	return digits
 }
 
-func copyDigitize(x int) []int {
-	digit := 0
-	digits := make([]int, 10)
-	for i := 0; x >= 1; i++ {
-		digit = x % 10
-		x /= 10
-		copy(digits[i:], []int{digit})
-	}
-	return digits
-}
-
+// make append
 func appendDigitze(x int) []int {
 	digit := 0
 	digits := make([]int, 10)
@@ -48,6 +39,18 @@ func appendDigitze(x int) []int {
 		digit = x % 10
 		x /= 10
 		digits = append(digits, digit)
+	}
+	return digits
+}
+
+// make copy
+func copyDigitize(x int) []int {
+	digit := 0
+	digits := make([]int, 10)
+	for i := 0; x >= 1; i++ {
+		digit = x % 10
+		x /= 10
+		copy(digits[i:], []int{digit})
 	}
 	return digits
 }
